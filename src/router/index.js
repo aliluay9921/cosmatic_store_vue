@@ -1,6 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from "../store/index";
+
 import Home from "../views/Home.vue";
+import Login from "../views/login.vue";
+import products from "../views/products.vue";
+import Brand from "../views/Brand.vue";
+import Ads from "../views/Ads.vue";
 
 Vue.use(VueRouter);
 
@@ -11,15 +17,62 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/login",
+    name: "Login",
+    component: Login,
+    meta: {
+      requireNotLogin: true,
+    }
   },
+  {
+    path: "/products",
+    name: "products",
+    component: products,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: "/brands",
+    name: "brand",
+    component: Brand,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: "/adversments",
+    name: "adversments",
+    component: Ads,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+
+
 ];
+
+
+// حتى اول مطب ع رابط يحولك ع لوكن
+// router.beforeEach((to, from, next) => {
+//   if (to.matched.some((record) => record.meta.requireNotLogin)) {
+//     if (store.getters.isLoggedIn) {
+//       next("/");
+//     } else {
+//       next();
+//     }
+//   } else if (to.matched.some((record) => record.meta.requiresAuth)) {
+//     if (store.getters.isLoggedIn) {
+//       next();
+//       return;
+//     }
+//     next("/login");
+//   } else {
+//     next();
+//   }
+// });
+
+
 
 const router = new VueRouter({
   mode: "history",
