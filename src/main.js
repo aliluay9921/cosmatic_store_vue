@@ -8,7 +8,7 @@ Vue.config.productionTip = false;
 Vue.prototype.$http = Axios;
 
 
-// Vue.use(require('vue-moment'));
+Vue.use(require('vue-moment'));
 import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"; // import lottie-vuejs
 Vue.use(LottieAnimation); // add lottie-animation to your global scope
 const token = localStorage.getItem("token");

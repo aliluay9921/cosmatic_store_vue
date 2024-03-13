@@ -4,6 +4,9 @@ import axios from "axios";
 import Product from "./modules/Product";
 import Brand from "./modules/Brand";
 import Ads from "./modules/Ads";
+import User from "./modules/User";
+import Order from "./modules/Order";
+import Routen from "./modules/Routen";
 
 
 Vue.use(Vuex);
@@ -141,5 +144,8 @@ export default new Vuex.Store({
     Product,
     Brand,
     Ads,
+    User,
+    Order,
+    Routen
   },
 });

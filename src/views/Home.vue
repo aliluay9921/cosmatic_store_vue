@@ -82,6 +82,47 @@
         ></v-card>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col cols="12" sm="4">
+        <v-card elevation="8" outlined shaped to="/routens">
+          <v-card-title class="text-h5">
+            <div class="icon">
+              <i class="fa fa-address-book" aria-hidden="true"></i>
+            </div>
+          </v-card-title>
+          <v-card-text class="mt-5 text-h4 dark--text text-center"
+            ><b>الروتينات</b>
+          </v-card-text>
+          <v-card-actions> </v-card-actions
+        ></v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card elevation="8" outlined shaped to="/users">
+          <v-card-title class="text-h5">
+            <div class="icon">
+              <i class="fa fa-address-book" aria-hidden="true"></i>
+            </div>
+          </v-card-title>
+          <v-card-text class="mt-5 text-h4 dark--text text-center"
+            ><b>الأشعارات</b>
+          </v-card-text>
+          <v-card-actions> </v-card-actions
+        ></v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card elevation="8" outlined shaped to="/users">
+          <v-card-title class="text-h5">
+            <div class="icon">
+              <i class="fa fa-address-book" aria-hidden="true"></i>
+            </div>
+          </v-card-title>
+          <v-card-text class="mt-5 text-h4 dark--text text-center"
+            ><b>الأعدادت</b>
+          </v-card-text>
+          <v-card-actions> </v-card-actions
+        ></v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
